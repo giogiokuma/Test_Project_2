@@ -1,0 +1,33 @@
+
+@import "compass/css3";
+
+.main {
+  background:#fcc;
+  margin-bottom: 10px; 
+}
+
+
+.side {
+  background: #fea;
+}
+
+.main,
+.side {
+  padding:2%;
+  border-radius: 10px;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .flexbox {
+  @include display-flex();
+  }
+  .main {
+  width:90%;
+  margin: 0 10px 0 0;
+  @include flex(2);
+  }
+  .side {
+  width: 10%;
+  }
+}
