@@ -1,9 +1,6 @@
 
 @import "compass/css3";
 
-
-@import "compass/css3";
-
 @import 'bourbon/bourbon'; 
 
 *, *::after, *::before {
@@ -24,6 +21,14 @@ body {
 }
 
 .item {
+	border-radius: 0;
+	background:#edf;
+	padding:0;
+	margin:7px;
+	text-align:center;
+	
+}
+/*.item {
   border-radius:0px;
   background:#fff;
   padding:0px;
@@ -32,7 +37,7 @@ body {
   box-shadow:0 0 7px 0 #CCC;
   -moz-box-shadow:0 0 7px 0 #CCC;
   -webkit-box-shadow:0 0 7px 0 #CCC
-}
+}*/
 h3 {
   padding-left:10px;
 }
@@ -63,8 +68,20 @@ p {
   p {font-size:1.2rem;}
 }
 @media only screen and (min-width: 768px) {
+	
+.flexbox {
+	width:768px;
+	@include display-flex();
+	@include flex-wrap(wrap);
+	@include flex-direction(column) ; 
+	max-height: 800px;
+}	
 
-  .flexbox {
+.item {
+	width: 30%;
+}
+
+ /* .flexbox {
   border:1px solid #999;
   width:768px;
   @include display-flex();
@@ -78,7 +95,7 @@ p {
   box-shadow:0 0 7px 0 #CCC;
   -moz-box-shadow:0 0 7px 0 #CCC;
   -webkit-box-shadow:0 0 7px 0 #CCC
-  }
+  }*/
   .author {
     font-weight: bold;
   }

@@ -1,0 +1,92 @@
+
+@import "compass/css3";
+
+@import 'bourbon/bourbon'; 
+
+*, *::after, *::before {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size:62.5%;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color:#555;
+}
+
+
+h3 {
+  padding-left:10px;
+}
+p {
+  padding:10px;
+  color:#666;
+}
+img {
+  width:100%; 
+  height: auto;
+}
+p {
+  text-align:left;
+}
+
+@media only screen and (min-width: 320px) {
+  .flex-container {
+	padding:0;
+	margin:0;
+	list-style:none;
+	@include display-flex();
+	@include flex-flow(row wrap);
+}
+
+.flex-item {
+	background:tomato;
+	padding:5px;
+	width:200px;
+	height:150px;
+	margin-top:10px;
+	
+	line-height:150px;
+	color:white;
+	font-weight: bold;
+	font-size:3em;
+	text-align:center;
+}
+
+
+  .author {
+    font-weight: bold;
+  }
+  h3.book_title {
+  width:100%;
+  font-size:1.5rem;
+  float:left;
+  }
+  p {font-size:1.2rem;}
+}
+@media only screen and (min-width: 768px) {
+
+  .author {
+    font-weight: bold;
+  }
+  h3.book_title {
+  font-size:1.5rem;
+  float:left;
+  clear:both;
+  }
+  p {
+  font-size:1.2rem;
+  padding:8px;
+  color:#666;
+  }
+}
+
+@media only screen and (min-width: 1170px ) {
+ 
+}
