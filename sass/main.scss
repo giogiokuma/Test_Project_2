@@ -101,7 +101,7 @@ header {
 @media only screen and (min-width: 320px) {
 .main-nav {
 	position:absolute;
-	top:105px;
+	top:0px;
 	float:left;
 	width:100%;
 	padding:15px;
@@ -112,7 +112,6 @@ header {
 .main-nav ul {
 	position: absolute;
 	top:0;
-	left:0;
 	width:100%;
 	
 	@include transform(translateY(-300%));
@@ -120,31 +119,39 @@ header {
 
 .main-nav ul.is-visible {
 	@include transform(translateY(50px));
+	background-color:#f8f8f8;
+	margin-left:-15px;
 }
 
 .main-nav ul li {
 	display:block;
-	height: 50px;
-	line-height:5%;
+	height: 40px;
+	padding-left:20px;
+	padding-top:13px;
 	color:#8e7d7f;
+}
+.main-nav ul li:hover {
+	background:#cedff2;
 }
 }
 
 
 @media only screen and (min-width: 768px) {
 .main-nav {
-	padding:0;
-	margin:0;
+	padding:5px 0 20px 0;
+	margin:0 0 15px 0;
 	position:absolute;
-	top:8px;
+	top:0px;
 	width:100%;
 	cursor:auto;
-	height: 50px;
+	height: 59px;
 	background-color:#f9f9f9;
 	background-image: none;
 }
 .main-nav ul {
-	padding-top:25px;
+	margin-top:0;
+	padding-top:10px;
+	padding-bottom:15px;
 	position:static;
 	@include display-flex;
 	@include justify-content(flex-end);
@@ -153,15 +160,68 @@ header {
 
 .main-nav ul li {
 	display:inline;
-	padding:17px;
+	padding:30px 30px 30px 25px;
+	margin: 0px 0px 50px 0px;
 }
 
 .main-nav ul li:hover {
 	background:#cedff2;
+	
 }
 .main-nav ul.is-visible {
 	@include transform(translateY(0));
 }
 
 }
+
+
+
+/* コンテンツ */
+
+.item {
+  border-radius:10px;
+  background:#fff;
+  padding:1.5em;
+  border:1px solid #999;
+  margin:0 .5em 1.5em;
+  width:100%;
+  @include box-sizing(border-box);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
+  @include border-radius(3px);
+
+}
+
+img {
+  max-width:100%;
+  height:auto;
+}
+
+p {
+  text-align:left;
+
+}
+
+
+@media only screen and (min-width:320px) {
+	.flexbox {
+    @include column-count(2);
+	}
+
+}
+@media only screen and (min-width: 1050px) {
+  
+  .flexbox {
+  width:800px;
+  @include display-flex();
+  @include flex-wrap(wrap);
+  @include flex-direction(center);
+  @include align-items(flex-start);
+  }
+
+
+  .item {
+  width:25%;
+  }
+}
+
 
