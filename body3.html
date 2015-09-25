@@ -1,129 +1,211 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <title>Document</title>
+<meta charset="utf-8">
+<title>タイトル</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/lightbox.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="css/main.css"> <!-- Resource style -->
+
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
+<style type="text/css">
+.sp {
+  margin-top: 40px;
+}
+
+
+/* top へ移動 */
+.arrow-top {
+  background-color:#666;
+  color:#f8f8f8;
+  padding: 13px;
+  border-radius:6px;
+}
+a.arrow-top  {
+  color:#f8f8f8;
+}
+a.arrow-top:hover {
+  background-color:#cccccc;
+}
+
+#back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right:30px;
+    display:none;
+}
+
+
+
+</style>
 </head>
 <body>
-<!--<header class="cd-header">
-<h1>Content Filter</h1>
-</header> -->
+  
+<header class="cd-header">
+<div id="cd-logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+
+<nav class="cd-main-nav">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#sp">About</a></li>
+  <li><a href="present.htm">Pricing</a></li>
+</ul>
+</nav>
+</header>
+
 
 <main class="cd-main-content">
-<div class="cd-tab-filter-wrapper">
-  <div class="cd-tab-filter">
-  <ul class="cd-filters">
-    <li class="placeholder">
-      <a href="#0" data-type="all"></a>
-    </li>
-    <li class="filter"><a href="#0" class="selected" data-type="all">All</a></li>
-    <li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Color 1</a></li>
-    <li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Color 2</a></li>
+<!--<div class="window">
+  <a href="#" class="close">x</a>
+  <dl><dt><a href="#sp"><img src="img/hyoshi.jpg" width="230" height="300" alt="."></a></dt><dd></dd></dl>
+</div>-->
+
+
+<div class="cd-fixed-bg cd-bg-1">
+  <!--　ここから　表紙ウィンドウ　-->
+  <div class="cd-filter">
+  <div class="cd-filter-block">
+  <br /><br /><br /><br /><br /><a href="#0" class="cd-close"><i class="fa fa-times"></i> Close</a><br /><br /><br /><br />
+  <p class="text-center"><a href="#sp"><img src="img/xxx.png" width="230" height="300" alt="."></a><br />date here</p>
+  <div class="t2"><a href="#sp">タイトル　here</a></div>
+  </div><!--cd-filter-block-->
+  </div><!--cd-filter-->
+    <a href="#0" class="cd-filter-trigger">&nbsp;&nbsp;&nbsp;</a>
+  <!-- ここまで　表紙ウィンドウ -->
+<h1></h1>
+</div><!--cd-fixed-bg cd-bg-1--><div id="sp"></div>
+
+    <div class="cd-fixed-bg cd-bg-2">
+      <h2>Lorem ipsum dolor sit amet.</h2>
+    </div> <!-- cd-fixed-bg -->
+
+    <div class="cd-scrolling-bg cd-color-3">
+      <div class="cd-container">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Quo nisi veritatis vitae nam, labore fugit. Inventore culpa iusto, officia exercitationem. Voluptates quibusdam odit odio incidunt consequatur, consectetur aspernatur optio vitae molestias, quas repellendus fugit ullam culpa, eligendi et dignissimos voluptatibus illum? Molestias aliquam nostrum quasi ipsa culpa, iusto explicabo ut error, consequuntur enim temporibus, adipisci tempora voluptate, id consequatur mollitia eveniet blanditiis. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Quo nisi veritatis vitae nam, labore fugit. Inventore culpa iusto, officia exercitationem. Voluptates quibusdam odit odio incidunt consequatur, consectetur aspernatur optio vitae molestias, quas repellendus fugit ullam culpa, eligendi et dignissimos voluptatibus illum? Molestias aliquam nostrum quasi ipsa culpa, iusto explicabo ut error, consequuntur enim temporibus, adipisci tempora voluptate, id consequatur mollitia eveniet blanditiis. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
+        </p>
+      </div> <!-- cd-container -->
+    </div> <!-- cd-scrolling-bg -->
+
+    <div class="cd-fixed-bg cd-bg-3">
+      <h2>Lorem ipsum dolor sit amet.</h2>
+    </div> <!-- cd-fixed-bg -->
+
+    <div class="cd-scrolling-bg cd-color-1">
+      <div class="cd-container">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique, dolor corrupti cumque qui consectetur autem laborum fuga quas ipsam doloribus sequi, mollitia, repellendus sapiente repudiandae labore rerum amet culpa inventore, modi non. Quo nisi veritatis vitae nam, labore fugit. Inventore culpa iusto, officia exercitationem. Voluptates quibusdam odit odio incidunt consequatur, consectetur aspernatur optio vitae molestias, quas repellendus fugit ullam culpa, eligendi et dignissimos voluptatibus illum? Molestias aliquam nostrum quasi ipsa culpa, iusto explicabo ut error, consequuntur enim temporibus, adipisci tempora voluptate, id consequatur mollitia eveniet blanditiis. Illo quod repellendus alias? Cum rem doloremque adipisci accusantium? Saepe, necessitatibus!
+        </p>
+      </div> <!-- cd-container -->
+    </div> <!-- cd-scrolling-bg -->
+
+    <div class="cd-fixed-bg cd-bg-4">
+      <h2>Lorem ipsum dolor sit amet.</h2>
+    </div> <!-- cd-fixed-bg -->
+
+<div class="cd-fixed-bg cd-color-5">
+
+<div class="container">
+<div class="row">
+<div class="col-xs-6 col-sm-3 sp">
+  <h4>『xxxx』とは</h4> 
+  <div class="t1">xxxxは、explanation です。for example where and it is used every where、moreover 文化、歴史、自然、観光、活躍する人々 を紹介しています。as what として、we try something action を心掛けています。
+</div>
+ 
+</div>
+<div class="col-xs-6 col-sm-3 sp">
+  <h4>リンク </h4> 
+  <ul>
+  <li><a href="xxx.html"><i class="fa fa-chain"></i>&nbsp;&nbsp;Link 1</a></li>
+  <li><a href="xxx.html"><i class="fa fa-chain"></i>&nbsp;&nbsp;Link 2</a></li>
   </ul>
-  </div>
 </div>
-
-<section class="cd-gallery">
+<div class="clearfix visible-xs"></div>
+<div class="col-xs-6 col-sm-3 sp">
+<h4>How to buy this products </h4>  
+<div class="t1">where to buy、where からご注文いただけます。</div>
+<h3><a href="xxx.html">other shop to buy or somewhere</a></h3>
+<br />
+<h3><a href="xxx.html">other info</a></h3>
 <ul>
-    <li class="mix color-1 check1 radio2 option3"><img src="img/img-1.jpg" alt="Image 1"></li>
-  <li class="mix color-2 check2 radio2 option2"><img src="img/img-2.jpg" alt="Image 2"></li>
-  <li class="mix color-1 check3 radio3 option1"><img src="img/img-3.jpg" alt="Image 3"></li>
-  <li class="mix color-1 check3 radio2 option4"><img src="img/img-4.jpg" alt="Image 4"></li>
-  <li class="mix color-1 check1 radio3 option2"><img src="img/img-5.jpg" alt="Image 5"></li>
-  <li class="mix color-2 check2 radio3 option3"><img src="img/img-6.jpg" alt="Image 6"></li>
-  <li class="mix color-2 check2 radio2 option1"><img src="img/img-7.jpg" alt="Image 7"></li>
-  <li class="mix color-1 check1 radio3 option4"><img src="img/img-8.jpg" alt="Image 8"></li>
-  <li class="mix color-2 check1 radio2 option3"><img src="img/img-9.jpg" alt="Image 9"></li>
-  <li class="mix color-1 check3 radio2 option4"><img src="img/img-10.jpg" alt="Image 10"></li>
-  <li class="mix color-1 check3 radio3 option2"><img src="img/img-11.jpg" alt="Image 11"></li>
-  <li class="mix color-2 check1 radio3 option1"><img src="img/img-12.jpg" alt="Image 12"></li>
-  <li class="gap"></li>
-  <li class="gap"></li>
-  <li class="gap"></li>
-</ul>
-<div class="cd-fail-message">No results found</div>
-</section>
-
-<div class="cd-filter">
-<form>
-<div class="cd-filter-block">
-<h4>Search</h4>
-
-<ul class="cd-filter-content cd-filters lists">
-<li>
-<input type="checkbox" class="filter" data-filter=".check1" id="checkbox1">
-<label for="checkbox1" class="checkbox-label">Option 1</label>
-</li>
-
-<li>
-<input type="checkbox" class="filter" data-filter=".check2" id="checkbox2">
-<label for="checkbox2" class="checkbox-label">Option 2</label>
-</li>
-
-<li>
-<input type="checkbox" class="filter" data-filter=".check3" id="checkbox3">
-<label for="checkbox3" class="checkbox-label">Option 3</label>
-</li>
-</ul><!--cd-filter-content-->
-</div>
-
-<div class="cd-filter-block">
-<h4>Select</h4>
-
-<div class="cd-filter-content">
-<div class="cd-select cd-filters">
-<select name="selectThis" id="selectThis" class="filter">
-  <option value="">Choose an option</option>
-  <option value=".option1">Option 1</option>
-  <option value=".option2">Option 2</option>
-  <option value=".option3">Option 3</option>
-  <option value=".option4">Option 4</option>
-</select>
-</div>
-</div>
-</div>
-
-<div class="cd-filter-block">
-<h4>Radio buttons</h4>
-
-<ul class="cd-filter-content cd-filters list">
-<li>
-  <input type="radio" name="radioButton" id="radio1" class="filter" data-filter="" checked>
-  <label for="radio1" class="radio-label">All</label>
-</li>
-
-<li>
-  <input type="radio" name="radioButton" id="radio2" class="filter" data-filter=".radio2">
-  <label for="radio2" class="radio-label"></label>
-</li> 
-
-<li>
-  <input type="radio" name="radioButton" id="radio3" class="filter" data-filter=".radio3">
-  <label for="radio3" class="radio-label"></label>
-</li>
-
+<li><a href="mailto:graph@raijin.com"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Contact Us</a></li>
 </ul>
 </div>
-</form>
-
-<a href="#0" class="cd-close">Close</a>
+<div class="col-xs-6 col-sm-3 sp">
+<h4>XXXXX</h4>
+<!--<h3>企画：群馬県　<br />編集・発行：上毛新聞社</h3>
+<h3>規格：B4判変型　本文36ページ</h3>
+<h3>定価：360円<span>（税込み）</span></h3>
+<h3>発行：年10回<span>（３月に「２・３月号」、７月に「６・７月号」として発行）</span></h3>
+<ul>
+<li>上毛新聞社&nbsp;事業局出版部</li>
+<li>〒371-8666　<br />前橋市古市町1-50-21</li>
+<li>TEL：027-254-9966　<br />FAX：027-254-9906</li>
+<li>Eメール：<a href="mailto:graph@raijin.com">graph@raijin.com</a></li>
+</ul>-->
+tel and address here
+</div>
+</div>
+<div class="row"> 
+<div class="col col-xs-12 col-sm-12 text-center">
+<!--topへ移動-->
+<div id="page-top">
+<a id="back-to-top" href="#" class="btn btn-default btn-sm back-to-top arrow-top" role="button" title="TOPへ移動" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 
-<a href="#0" class="cd-filter-trigger">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+<div class="copyright">
+<br /><br /><br />
+掲載の記事・写真などの無断転載を禁じます。<br>
+Copyright &#169; <script type="text/javascript">var md=new Date(); var yr = md.getFullYear();document.write(yr);</script> Jomo Shimbun, Inc. All rights reserved.<br /><br /><br />
+</div>
+</div><!--col-sm-12-->
+</div><!--row-->
+</div>
+</div>
+
+
 </main>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main3.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- top へ移動する -->
+<script type="text/javascript">
+$(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
 
+});
+</script>
 
 </body>
 </html>

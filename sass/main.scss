@@ -1,0 +1,167 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+@import 'compass/css3';
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	font:{
+		size:100%;
+		family: $primary-font;
+	}
+	
+	color: $color-1;
+	background-color:$color-4;
+}
+
+
+a {
+	color:$color-3;
+	text-decoration:none;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+
+.cd-container {
+	width:90%;
+	max-width:$M;
+	margin: 0 auto;
+	
+	&::after {
+		content: '';
+		display:table;
+		clear:both;
+	}
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+header {
+	
+}
+
+
+.cd-header {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: $header-height-S;
+	background:rgba($color-4, .95);
+	box-shadow: 0 1px 2px rgba(#000, .2);
+	z-index: index($main-elements, navigation);
+	@include clearfix;
+	
+	#cd-logo {
+		float: left;
+		margin: 13px 0 0 5%;
+		
+		img {
+			display:block;
+		}
+	}
+	
+	@include MQ(M) {
+		height: $header-height-M;
+		
+		#cd-logo {
+			margin: 23px 0 0 5%;
+		}
+	} 
+}
+
+
+/* main nav */
+@media only screen and (min-width: 320px) {
+.main-nav {
+	position:absolute;
+	top:105px;
+	float:left;
+	width:100%;
+	padding:15px;
+	background:#f9f9f9 url('../img/cd-icon-menu.svg') no-repeat left center;
+	cursor:pointer;
+}
+
+.main-nav ul {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	
+	@include transform(translateY(-300%));
+}
+
+.main-nav ul.is-visible {
+	@include transform(translateY(50px));
+}
+
+.main-nav ul li {
+	display:block;
+	height: 50px;
+	line-height:5%;
+	color:#8e7d7f;
+}
+}
+
+
+@media only screen and (min-width: 768px) {
+.main-nav {
+	padding:0;
+	margin:0;
+	position:absolute;
+	top:8px;
+	width:100%;
+	cursor:auto;
+	height: 50px;
+	background-color:#f9f9f9;
+	background-image: none;
+}
+.main-nav ul {
+	padding-top:25px;
+	position:static;
+	@include display-flex;
+	@include justify-content(flex-end);
+	@include transform(translateY(-17px));
+}
+
+.main-nav ul li {
+	display:inline;
+	padding:17px;
+}
+
+.main-nav ul li:hover {
+	background:#cedff2;
+}
+.main-nav ul.is-visible {
+	@include transform(translateY(0));
+}
+
+}
+
