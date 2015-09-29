@@ -1,0 +1,76 @@
+/* line 12, ../sass/main3.scss */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 17, ../sass/main3.scss */
+*, *:after, *:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../sass/main3.scss */
+body {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #3d3536;
+  background-color: #ffffff;
+}
+
+/* line 31, ../sass/main3.scss */
+a {
+  color: #b4d7a8;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+@media only screen and (min-width: 320px) {
+  /* line 42, ../sass/main3.scss */
+  .main-container {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+  }
+
+  /* line 46, ../sass/main3.scss */
+  .side {
+    background: #eee;
+  }
+
+  /* line 50, ../sass/main3.scss */
+  .main-container, side {
+    padding: 2%;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 59, ../sass/main3.scss */
+  .cd-container {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 auto;
+  }
+  /* line 63, ../sass/main3.scss */
+  .cd-container::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  /* line 70, ../sass/main3.scss */
+  .main-container {
+    margin: 0 10px 0 0;
+    -webkit-flex: 2;
+    flex: 2;
+  }
+
+  /* line 76, ../sass/main3.scss */
+  .side {
+    width: 10%;
+  }
+}

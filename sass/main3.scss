@@ -1,0 +1,79 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+@import 'compass/css3';
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+
+
+html * {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	font: {
+		size:100%;
+		family: $primary-font;
+	}
+	
+	color:$color-1;
+	background-color:$color-4;
+}
+
+a {
+	color:$color-3;
+	text-decoration:none;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+@media only screen and (min-width: 320px) {
+	.main-container {
+		background:#f9f9f9;
+		margin-bottom:10px;
+	}
+	.side {
+		background:#eee;
+	}
+	
+	.main-container, side {
+		padding:2%;
+		border-radius: 10px;
+	}
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	.cd-container {
+		@include display-flex();
+		margin:0 auto;
+
+		&::after {
+			content:'';
+			display:table;
+			clear:both;
+		}
+	}
+	
+	.main-container {		
+		margin: 0 10px 0 0;
+		@include flex(2);
+	}
+	
+	
+	.side {
+		width:10%;		
+	}
+}
