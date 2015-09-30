@@ -33,6 +33,7 @@ a {
 	text-decoration:none;
 }
 
+
 /* -------------------------------- 
 
 Layout
@@ -154,11 +155,12 @@ Screen etc.
 
 @media only screen and (min-width: 768px) {
 /* layout  */
+
 .cd-container {
 	width:1050px;
 	@include display-flex();
 	margin:0 auto;
-	padding-top:5%;
+	padding-top:6%;
 	&::after {
 		content:'';
 		display:table;
@@ -243,7 +245,13 @@ p {
 
 @media only screen and (min-width:320px) {
 	.flexbox {
-    @include column-count(2);
+		width:420px;
+		@include display-flex();
+		@include flex-wrap(wrap);
+		margin-top:5%;
+	}
+	.item {
+		width: 45%;
 	}
 
 }
